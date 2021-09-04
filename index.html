@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="vol.6.css">
+<meta name="viewport" content="width=360,initial-scale=1.0">
+<title>ラッキーカラーを決めよう（仮）</title>
+</head>
+<body>
+<form name="param" action="#">
+
+<header>
+    <h1>Today's Locky Color</h1>
+</header>
+
+
+<label for="weather">天気を選択してください</label>
+<select name="weather" id="weather">
+<option value="晴れ">晴れ</option>
+<option value="曇り">曇り</option>
+<option value="雨">雨</option>
+</select><br><br>
+
+<label for="temperature">温度を選択してください(何度以上何度未満)</label>
+<select name="temperature" id="temperature">
+<option value="0~5">0~5</option>
+<option value="5~10">5~10</option>
+<option value="10~15">10~15</option>
+<option value="15~20">15~20</option>
+<option value="20~25">20~25</option>
+<option value="25~30">25~30</option>
+<option value="30~35">30~35</option>
+<option value="35~">35~</opttion>
+</select><br><br>
+
+<label for="Humidity">湿度を選択してください(以上未満)</label>
+<select name="Humidity" id="Humidity">
+<option value="0~30">0~30</option>
+<option value="30~60">30~60</option>
+<option value="60~90">60~90</option>
+<option value="90~">90~</option>
+</select><br><br>
+<input type="button" value="送信" onclick="func()">
+</form>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+<script>
+
+function func() {
+
+var weather = $('#weather').val();
+var temperature = $('#temperature').val();
+var Humidity = $('#Humidity').val();
+if (weather == '晴れ' && temperature == '25~30' && Humidity == '60~90'){
+ window.location.href = 'file:///Users/wnysky/ハッカソン仮/リンク先/リンク先１.html';
+}
+else if (weather == '雨' && temperature == '5~10' && Humidity == '30~60'){
+ window.location.href = 'file:///Users/wnysky/ハッカソン仮/リンク先/リンク先２.html';
+}
+else {
+ window.location.href = 'file:///Users/wnysky/ハッカソン仮/リンク先/リンク先３.html';
+}
+}
+</script>
+</body>
+</html>
