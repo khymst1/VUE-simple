@@ -27,5 +27,4 @@ admin.site.disable_action('delete_selected')
 urlpatterns = [
     path('staff-admin/', admin.site.urls),
     path("", include("history.urls")),
-    path('history/', include('history.urls')),
 ]
